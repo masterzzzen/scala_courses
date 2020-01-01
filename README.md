@@ -1,4 +1,4 @@
-My solutions to exercises to the following Scala courses on Scala.
+My solutions to exercises to the following Scala courses on Udemy.
 
 [Applied Scala, Part 1](
 https://www.udemy.com/share/101BUuBUMTdVlT/)
