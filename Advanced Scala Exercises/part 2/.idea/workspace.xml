@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9be7eb79-fc01-4336-98c6-a91e8f5e81e1" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="PantsLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/workspace/source/bizinsights" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/bizinsights/src/main/scala/com/twitter/bizinsights/jobs/eventdetection" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/bizinsights/src/main/scala/com/twitter/bizinsights/jobs/eventdetection/taxisimulation" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/bizinsights/src/main/scala/com/twitter/bizinsights/jobs/tweet_entities" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/bizinsights/src/test/scala/com/twitter/bizinsights/jobs/eventdetection" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/clpm/src/main/scala/com/twitter/clpm/jobs/word_clustering" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/eventdetection" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/eventdetection/common" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/eventdetection/offline" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/eventdetection/offline/src/test/scala/com/twitter/eventdetection/cluster_simulation" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/events-recos" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/events-recos/events-recos-service" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/events-recos/relevance" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/events-recos/relevance/src/test/scala/com/twitter/events/recos/relevance/features" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/frigate/frigate-common" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/guide" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/guide/mixer" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/guide/scalding/src/main/scala/com/twitter/guide/scalding/guide_topic_engagements" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/guide/scalding/src/main/thrift/com/twitter/guide/guide_topic_engagements" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/moments" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/moments/metrics-web" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/moments/metrics-web/src/test/scala/com/twitter/moments/metrics-web" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/moments/model" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/moments/relevance" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/personalized-sports" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/sandbox/users/czhong/event_clustering_simulation" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/sandbox/users/czhong/event_clustering_simulation/src/scala/com/twitter/users/czhong/event_clustering_simulation" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/sandbox/users/mfedoryszak/ner_downloader" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/src/scala/com/twitter/ads/batch/experimental/hongjianw" value="PREVIEW" />
+        <entry key="$USER_HOME$/workspace/source/src/scala/com/twitter/taxi" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1VlweDo0yfEvS3P8Oue5ZW5vDj5" />
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="ScalaTest.Module11">
+    <configuration name="Module07" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="module07" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="testKind" value="Class" />
+      <option name="envs">
+        <map />
+      </option>
+      <option name="javaOptions" value="" />
+      <option name="jrePath" />
+      <option name="searchTest" value="Across module dependencies" />
+      <option name="showProgressMessages" value="true" />
+      <option name="testArgs" value="" />
+      <option name="testClassPath" value="koans.Module07" />
+      <option name="useSbt" value="false" />
+      <option name="useUiWithSbt" value="false" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Module08" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="module08" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="testKind" value="Class" />
+      <option name="envs">
+        <map />
+      </option>
+      <option name="javaOptions" value="" />
+      <option name="jrePath" />
+      <option name="searchTest" value="Across module dependencies" />
+      <option name="showProgressMessages" value="true" />
+      <option name="testArgs" value="" />
+      <option name="testClassPath" value="koans.Module08" />
+      <option name="useSbt" value="false" />
+      <option name="useUiWithSbt" value="false" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Module09" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="module09" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="testKind" value="Class" />
+      <option name="envs">
+        <map />
+      </option>
+      <option name="javaOptions" value="" />
+      <option name="jrePath" />
+      <option name="searchTest" value="Across module dependencies" />
+      <option name="showProgressMessages" value="true" />
+      <option name="testArgs" value="" />
+      <option name="testClassPath" value="koans.Module09" />
+      <option name="useSbt" value="false" />
+      <option name="useUiWithSbt" value="false" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Module10Json" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="module10" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="testKind" value="Class" />
+      <option name="envs">
+        <map />
+      </option>
+      <option name="javaOptions" value="" />
+      <option name="jrePath" />
+      <option name="searchTest" value="Across module dependencies" />
+      <option name="showProgressMessages" value="true" />
+      <option name="testArgs" value="" />
+      <option name="testClassPath" value="koans.Module10Json" />
+      <option name="useSbt" value="false" />
+      <option name="useUiWithSbt" value="false" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Module11" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="module11" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="testKind" value="Class" />
+      <option name="envs">
+        <map />
+      </option>
+      <option name="javaOptions" value="" />
+      <option name="jrePath" />
+      <option name="searchTest" value="Across module dependencies" />
+      <option name="showProgressMessages" value="true" />
+      <option name="testArgs" value="" />
+      <option name="testClassPath" value="koans.Module11" />
+      <option name="useSbt" value="false" />
+      <option name="useUiWithSbt" value="false" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="ScalaTest.Module11" />
+        <item itemvalue="ScalaTest.Module10Json" />
+        <item itemvalue="ScalaTest.Module09" />
+        <item itemvalue="ScalaTest.Module08" />
+        <item itemvalue="ScalaTest.Module07" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="Scala-Advanced-Exercises" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="module08 [file:/Users/pzeng/Documents/Scala%20Courses/Exercises/Advanced%20Scala%20Exercises/part%202/]" />
+                <option name="path" value="$PROJECT_DIR$/module08" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="module11 [file:/Users/pzeng/Documents/Scala%20Courses/Exercises/Advanced%20Scala%20Exercises/part%202/]" />
+                <option name="path" value="$PROJECT_DIR$/module11" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="module10 [file:/Users/pzeng/Documents/Scala%20Courses/Exercises/Advanced%20Scala%20Exercises/part%202/]" />
+                <option name="path" value="$PROJECT_DIR$/module10" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="part-2 [file:/Users/pzeng/Documents/Scala%20Courses/Exercises/Advanced%20Scala%20Exercises/part%202/]" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="module09 [file:/Users/pzeng/Documents/Scala%20Courses/Exercises/Advanced%20Scala%20Exercises/part%202/]" />
+                <option name="path" value="$PROJECT_DIR$/module09" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="module07 [file:/Users/pzeng/Documents/Scala%20Courses/Exercises/Advanced%20Scala%20Exercises/part%202/]" />
+                <option name="path" value="$PROJECT_DIR$/module07" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="Scala-Advanced-Exercises-build" />
+                <option name="path" value="$PROJECT_DIR$/project" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/build.sbt" value="2928152528" />
+        <entry key="$PROJECT_DIR$/project/build.properties" value="29646416" />
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../../Advanced Scala/Code/part 1" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Advanced Scala/Code/part 2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Applied Scala/Applied Scala Exercises/part1" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Applied Scala/Code/part1" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Applied Scala/Code/part2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../Applied Scala/Code/part3" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../part 1" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../Applied Scala Exercises/part1" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../Applied Scala Exercises/part2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../Applied Scala Exercises/part3" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9be7eb79-fc01-4336-98c6-a91e8f5e81e1" name="Default Changelist" comment="" />
+      <created>1577841082183</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577841082183</updated>
+    </task>
+    <servers />
+  </component>
+</project>

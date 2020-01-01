@@ -1,0 +1,212 @@
+
+/* Copyright (C) 2010-2018 Escalate Software, LLC. All rights reserved. */
+
+package koans
+import org.scalatest.Matchers
+import org.scalatest.SeveredStackTraces
+import support.BlankValues._
+import support.KoanSuite
+import scala.collection._
+
+class Module07 extends KoanSuite with Matchers with SeveredStackTraces {
+
+  // Using the object model on the last slide of Flight 7, and the instructions below, create
+  // a class heirarchy that satisfies the tests below when they are uncommented
+
+  // abstract class RollingStock should have an abstract field, name, of type String
+  abstract class RollingStock {
+    def name: String
+  }
+
+  // abstract class Car should subclass RollingStock and add a field carries of type String
+  // and a method (with implementation) called pulled that returns a string formed of
+  // name + " carrying " + carries
+  abstract class Car extends RollingStock {
+    def carries: String
+    def pulled: String = {
+      name + " carrying " + carries
+    }
+    override def toString: String = pulled
+  }
+
+  // concrete class PassengerCar should subclass Car, set the name field to be "Passenger car" and
+  // the carries field to "people"
+  class PassengerCar extends Car {
+    def name = "Passenger car"
+    def carries: String = "people"
+  }
+
+  // concrete class CargoCar should subclass Car, set the name field "Cargo car" and
+  // the carries field to "cargo"
+  class CargoCar extends Car {
+    override def name: String = "Cargo car"
+    override def carries: String = "cargo"
+  }
+
+  // now create an abstract Engine class that subclasses RollingStock and has the following:
+  // a cars field with a mutable.ListBuffer of Cars
+  // a method pull that returns a string consisting of name + " pulls " + the list of cars in the
+  // ListBuffer using the pulled method to get the descriptive string of each car. The cars details should
+  // be joined with " and ", and there should be no trailing " and " after the last car
+  // an abstract maxCars field of type Int (that specifies the maximum number of cars that may
+  // be added to the engine), and finally
+  // an add method that takes a Car, and adds it to the ListBuffer *unless* that would exceed the
+  // maximum number of Cars allowed in the maxCars field. If there are too many cars, throw an
+  // IllegalStateException with a suitable message
+  //
+  // Note that mkString is an easy way to join a list of things, but by default it performs
+  // a toString on each object, which doesn't return the string you want, either you will
+  // need to define toString for the cars with some meaningful implementation (maybe forward 
+  // to pulled) or else you will need to convert them all to the strings you want first.
+  abstract class Engine extends RollingStock {
+    val cars: mutable.ListBuffer[Car] = mutable.ListBuffer.empty[Car]
+    def pull: String = name + " pulls " + cars.mkString(" and ")
+    val maxCars: Int
+    def add(car: Car): mutable.ListBuffer[Car] = {
+      if (cars.length < maxCars) {
+        cars.append(car)
+        cars
+      } else {
+        throw new IllegalStateException("Not enough space for another car.")
+      }
+    }
+  }
+  // Create a concrete class SteamEngine that subclasses Engine, sets the name field to "Steam engine"
+  // and the maxCars field to 3
+  class SteamEngine extends Engine {
+    override def name: String = "Steam engine"
+    override val maxCars: Int = 3
+  }
+
+  // Create a concrete class DieselEngine that subclasses Engine, sets the name field to "Diesel engine"
+  // and the maxCars field to 6
+  class DieselEngine extends Engine {
+    override def name: String = "Diesel engine"
+    override val maxCars: Int = 6
+  }
+
+  // now uncomment the following tests (first comment block only) and run them to make sure they pass
+  test ("2 passenger car steam train") {
+    val steamEngine = new SteamEngine
+    steamEngine.add(new PassengerCar)
+    steamEngine.add(new PassengerCar)
+
+    steamEngine.pull should be ("Steam engine pulls Passenger car carrying people and Passenger car carrying people")
+  }
+
+  test ("4 car steam train should throw exception") {
+    val steamEngine = new SteamEngine
+    steamEngine.add(new PassengerCar)
+    steamEngine.add(new CargoCar)
+    steamEngine.add(new PassengerCar)
+
+    intercept[IllegalStateException] {
+      steamEngine.add(new CargoCar)
+    }
+
+    steamEngine.pull should be ("Steam engine pulls Passenger car carrying people and " +
+                                "Cargo car carrying cargo and Passenger car carrying people")
+  }
+
+  test ("5 car diesel train") {
+    val dieselEngine = new DieselEngine
+    dieselEngine.add(new CargoCar)
+    dieselEngine.add(new PassengerCar)
+    dieselEngine.add(new CargoCar)
+    dieselEngine.add(new PassengerCar)
+    dieselEngine.add(new CargoCar)
+
+    dieselEngine.pull should be ("Diesel engine pulls Cargo car carrying cargo and " +
+                                 "Passenger car carrying people and " +
+                                 "Cargo car carrying cargo and " +
+                                 "Passenger car carrying people and " +
+                                 "Cargo car carrying cargo")
+  }
+
+  // now create a new class - ShuntEngine that overrides the pull method to print the string:
+  // name + " doesn't pull, it pushes " and then the rest of the train description as before. It should
+  // also provide the name as "Shunt engine" and the maxCars as 10 (shunt engines are strong :-) )
+  // then uncomment the test below and make sure it passes
+  class ShuntEngine extends Engine {
+    override val name: String = "Shunt engine"
+    override def pull: String = name + " doesn't pull, it pushes " + cars.mkString(" and ")
+    override val maxCars: Int = 10
+  }
+  test ("Shunt engine with 8 cars") {
+    val shuntEngine = new ShuntEngine
+    shuntEngine.add(new CargoCar)
+    shuntEngine.add(new PassengerCar)
+    shuntEngine.add(new CargoCar)
+    shuntEngine.add(new PassengerCar)
+    shuntEngine.add(new CargoCar)
+    shuntEngine.add(new PassengerCar)
+    shuntEngine.add(new CargoCar)
+    shuntEngine.add(new PassengerCar)
+
+    shuntEngine.pull should be ("Shunt engine doesn't pull, it pushes Cargo car carrying cargo and " +
+                                 "Passenger car carrying people and " +
+                                 "Cargo car carrying cargo and " +
+                                 "Passenger car carrying people and " +
+                                 "Cargo car carrying cargo and " +
+                                 "Passenger car carrying people and " +
+                                 "Cargo car carrying cargo and " +
+                                 "Passenger car carrying people")  
+  }
+
+  // now, let's make the train creation a little more readable with some factory methods. Create
+  // an object called Engine with factory methods to create the different engine types (call the methods
+  // diesel, steam and shunt) and a Car object with passenger and cargo methods, then uncomment
+  // the test below and make sure it passes.
+
+  object Engine {
+    def diesel: DieselEngine = new DieselEngine
+    def steam: SteamEngine = new SteamEngine
+    def shunt: ShuntEngine = new ShuntEngine
+  }
+  
+  object Car {
+    def passenger: PassengerCar = new PassengerCar
+    def cargo: CargoCar = new CargoCar
+  }
+
+  test ("Train factory") {
+    val steamEngine = Engine.steam
+    steamEngine add Car.passenger    // crafty use of infix operator syntax to make it read nicely
+    steamEngine add Car.passenger
+
+    steamEngine.pull should be ("Steam engine pulls Passenger car carrying people and Passenger car carrying people")
+
+    val dieselEngine = Engine.diesel
+    dieselEngine add Car.cargo
+    dieselEngine add Car.passenger
+    dieselEngine add Car.cargo
+    dieselEngine add Car.passenger
+    dieselEngine add Car.cargo
+
+    dieselEngine.pull should be ("Diesel engine pulls Cargo car carrying cargo and " +
+                                 "Passenger car carrying people and " +
+                                 "Cargo car carrying cargo and " +
+                                 "Passenger car carrying people and " +
+                                 "Cargo car carrying cargo")
+
+    val shuntEngine = Engine.shunt
+    shuntEngine add Car.cargo
+    shuntEngine add Car.passenger
+    shuntEngine add Car.cargo
+    shuntEngine add Car.passenger
+    shuntEngine add Car.cargo
+    shuntEngine add Car.passenger
+    shuntEngine add Car.cargo
+    shuntEngine add Car.passenger
+    
+    shuntEngine.pull should be ("Shunt engine doesn't pull, it pushes Cargo car carrying cargo and " +
+                                 "Passenger car carrying people and " +
+                                 "Cargo car carrying cargo and " +
+                                 "Passenger car carrying people and " +
+                                 "Cargo car carrying cargo and " +
+                                 "Passenger car carrying people and " +
+                                 "Cargo car carrying cargo and " +
+                                 "Passenger car carrying people")
+  }
+
+}
