@@ -1,7 +1,7 @@
 My solutions to exercises to the following Scala courses on Scala.
 
-Applied Scala, Part 1
-https://www.udemy.com/share/101BUuBUMTdVlT/
+[Applied Scala, Part 1](
+https://www.udemy.com/share/101BUuBUMTdVlT/)
 
 Applied Scala, Part 2
 https://www.udemy.com/share/102rmoBUMTdVlT/
